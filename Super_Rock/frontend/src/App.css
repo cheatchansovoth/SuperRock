@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
-
+h1
+{
+  font-weight: 200;
+}
 .text-center
 {
   margin: auto;

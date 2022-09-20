@@ -17,6 +17,7 @@ const Tredingmenu=()=>{
         const data=await api.json();
 
        setFood(data.recipes)
+       console.log(food)
     }
         return (
             <div className='display-flex'>
