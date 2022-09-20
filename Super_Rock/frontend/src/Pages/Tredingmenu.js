@@ -1,8 +1,8 @@
 import {useEffect,useState} from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 import '@splidejs/react-splide/css';
 import './Tredingmenu.css'
-
 
 const Tredingmenu=()=>{
 
@@ -13,11 +13,12 @@ const Tredingmenu=()=>{
     },[]);
     const getFood= async()=>
     {
-        const api=await fetch(`https://api.spoonacular.com/recipes/random?apiKey=ea86987b39784e98bea16d848a4994ee&number=9`)
+        const api=await fetch(`https://api.spoonacular.com/recipes/random?apiKey=a1b7dd9400694e96b6ed3e3605012ffa&number=9`)
         const data=await api.json();
 
        setFood(data.recipes)
        console.log(food)
+
     }
         return (
             <div className='display-flex'>
