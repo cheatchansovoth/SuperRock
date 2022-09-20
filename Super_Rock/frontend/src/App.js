@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Routes,Link} from 'react-router-dom';
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
-import Category from './Pages/Category';
+import Menu from './Pages/Menu';
 import Home from './Pages/Home';
 function App() {
   return (
@@ -35,6 +35,7 @@ const Navbars=()=>{
           <Route path='/about' element={<About/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
+          <Route path='/menu' element={<Menu/>}></Route>
         </Routes>
   </Router>
   );

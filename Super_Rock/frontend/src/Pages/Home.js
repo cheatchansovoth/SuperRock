@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {Container,Row,Col,Button} from 'react-bootstrap';
 import TredingMenu from './Tredingmenu';
 import './Home.css'
@@ -11,7 +12,9 @@ const Home=()=>
                 <Col lg={6}>
                 <h1>Hungry ?</h1>
                 <h3 className='mt-4'>Why don't you get food from us ?</h3>
-                <Button className='mt-4'>Order Now!!</Button>
+                <Link to='/menu'>
+                <Button className='mt-4' >Order Now!!</Button>
+                </Link>
                 </Col>
                 <Col lg={6}>
                     <img src='https://play-lh.googleusercontent.com/2wYuaJlrof7lp_sh-rhZ0FlWSORID5ZTy5JXJcT_GCRvXf-7O6ysFU3Hf4XRCALwlQ=w600-h300-pc0xffffff-pd' alt='burger' style={{width:'480px'}}/>
@@ -19,7 +22,7 @@ const Home=()=>
             </Row>
             <Row>
                 <Col>
-                    <TredingMenu/>
+                    {/* <TredingMenu/> */}
                 </Col>
             </Row>
         </Container>
