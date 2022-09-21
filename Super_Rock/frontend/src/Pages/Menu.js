@@ -20,6 +20,10 @@ const Menu=()=>
                 <div class="main">
         <div class="section-title">
             <h2>
+                Test
+            </h2>
+            <br></br>
+            <h2>
                 Menu
             </h2>
             <p>Super rock awsome food all day!!</p>
