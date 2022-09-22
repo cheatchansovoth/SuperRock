@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {
     MDBContainer,
     MDBCol,
@@ -34,7 +35,11 @@ const Login=()=>
   
             <div className='text-center text-md-start mt-4 pt-2'>
               <MDBBtn className="mb-0 px-5" size='lg'>Login</MDBBtn>
-              <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#!" className="link-danger">Register</a></p>
+              <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? 
+              <Link to='/register'>
+              <a href="#!" className="link-danger">Register</a>
+              </Link>
+              </p>
             </div>
   
           </MDBCol>

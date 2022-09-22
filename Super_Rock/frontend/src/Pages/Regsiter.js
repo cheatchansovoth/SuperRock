@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Register.css';
+import Axios from 'axios';
 import {
     MDBBtn,
     MDBContainer,
@@ -14,11 +15,23 @@ import {
     MDBCheckbox
   }
   from 'mdb-react-ui-kit';
-
 const Register=()=>
 {
+     const [name, setName]=useState("");
+     const [email, setEmail]=useState("");
+     const [password, setPassword]=useState("");
+     
+     const buttonAction=()=>
+     {
+        Axios.post('http://localhost:5000/register',{
+            name:name,
+            email:email,
+            password:password
+        });
+     }
     return (
         <MDBContainer>
+             
         <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
         <h1 className='mt-5 mb-5'>Sign Up</h1>
           <MDBCardBody>
@@ -27,17 +40,32 @@ const Register=()=>
   
                 <div className="d-flex flex-row align-items-center mb-4 ">
                   <MDBIcon fas icon="user me-3" size='lg'/>
-                  <MDBInput label='Your Name' id='form1' type='text' className='w-100'/>
+                  <MDBInput label='Your Name' id='form1' type='text' className='w-100'
+                  onChange={(event)=>
+                {
+                    setName(event.target.value);
+                }}
+                  />
                 </div>
   
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="envelope me-3" size='lg'/>
-                  <MDBInput label='Your Email' id='form2' type='email'/>
+                  <MDBInput label='Your Email' id='form2' type='email'
+                  onChange={(event)=>
+                    {
+                        setEmail(event.target.value);
+                    }}                  
+                  />
                 </div>
   
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="lock me-3" size='lg'/>
-                  <MDBInput label='Password' id='form3' type='password'/>
+                  <MDBInput label='Password' id='form3' type='password'
+                  onChange={(event)=>
+                    {
+                        setPassword(event.target.value);
+                    }}                  
+                  />
                 </div>
   
                 <div className="d-flex flex-row align-items-center mb-4">
@@ -45,11 +73,9 @@ const Register=()=>
                   <MDBInput label='Repeat your password' id='form4' type='password'/>
                 </div>
   
-                <div className='mb-4'>
-                  <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
-                </div>
-  
-                <MDBBtn className='mb-4' size='lg'>Register</MDBBtn>
+                <MDBBtn className='mb-4' size='lg'
+                
+                onClick={buttonAction}>Register</MDBBtn>
   
               </MDBCol>
   
