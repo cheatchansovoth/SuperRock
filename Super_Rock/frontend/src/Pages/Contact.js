@@ -9,7 +9,8 @@ const Contact=()=>
         <div>
             <h1>Contact</h1>
             <p>Super Rock Resrutrant</p>
-            <p>We offer a wide range of food options for our customers. We will make that our serive satisfy your needs. Please contact us with any queries</p>
+            <p>We offer a wide range of food options for our customers. We will make that our serive satisfy your needs.</p>
+            <h3>Please contact us with any enquiries</h3>
             <p>Address: 890 John Road</p>
             <p>Phone: 90181489104</p>
             <p>Email: super_rock@aut.com</p>
@@ -21,6 +22,9 @@ const Contact=()=>
 
                     <label for="email">Email</label>
                     <input type="text" id="email" name="firstname" placeholder="Enter Email Address.."/>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter Phone Number.."/>
                     
                     <label for="subject">Message</label>
                     <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
