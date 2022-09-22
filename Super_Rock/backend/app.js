@@ -40,11 +40,11 @@ app.post('/login',async(req,res,next)=>
     const user= await User.findOne({email:email});
     if(!user || user.password!==password)
     {
-        console.log('Invalid data');
+        console.log('user not found')
     }
     else 
     {
-        res.send(__dirname+'/index.html')
+        console.log('user found');
     }
 }
 )

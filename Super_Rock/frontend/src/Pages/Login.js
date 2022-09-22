@@ -20,8 +20,8 @@ const Login=()=>
 
   const loginOnClick=()=>
   {
-
     Axios.post('http://localhost:5000/login',{email:email,password:password})
+    window.location='/menu';
   };
     return (
         <MDBContainer className="p-3 my-5 h-custom">
