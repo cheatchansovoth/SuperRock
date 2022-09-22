@@ -21,3 +21,27 @@ app.listen(port,(req,res)=>
 {
     console.log(`App is running at port ${port}`);
 })
+require('./userDetails');
+
+const User= mongoose.model('UserInformation');
+
+app.post('/register',async(req,res,next)=>
+{
+    const {name,email,password}=req.body;
+    try{
+        await User.create({
+            name:name,
+            email:email,
+            password:password
+        });
+        res.send({status:'ok'});
+    }
+    catch(error)
+    {
+        res.send({status:'error'});
+    }
+    finally
+    {
+
+    }
+})
