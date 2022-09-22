@@ -22,7 +22,7 @@ const Home=()=>
             </Row>
             <Row>
                 <Col>
-                    {/* <TredingMenu/> */}
+                    <TredingMenu/>
                 </Col>
             </Row>
         </Container>
