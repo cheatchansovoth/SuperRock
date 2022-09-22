@@ -7,16 +7,18 @@ const Contact=()=>
 
     return (
         <div>
-            <h1>Contact</h1>
+            <h1>Contact Us</h1>
             <p>Super Rock Resrutrant</p>
-            <p>We offer a wide range of food options for our customers. We will make that our serive satisfy your needs.</p>
-            <h3>Please contact us with any enquiries</h3>
+            <p>We offer a wide range of food options for our customers. Our range varies from a special breakfeast menu, 
+                a special lunch menu and our very popular dinner menu. We will make that our serive satisfy your needs 
+                and that you have the best possible experience</p>
             <p>Address: 890 John Road</p>
             <p>Phone: 90181489104</p>
             <p>Email: super_rock@aut.com</p>
 
             <div class="border">
                 <form>
+                    <h3>Please contact us with any enquiries</h3>
                     <label for="fname">Full Name</label>
                     <input type="text" id="name" name="fullname" placeholder="Your full name.."/>
 
