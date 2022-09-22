@@ -32,6 +32,21 @@ app.post('/register',async(req,res)=>
     console.log(err);
   }
 });
+app.post('/login',async(req,res)=>
+{
+    const email=req.body.email;
+    const password=req.body.password;
+    const user= await User.findOne({email:email});
+    if(!user || user.password!==password)
+    {
+        console.log('Invalid data');
+    }
+    else
+    {
+        res.redirect('https://www.geeksforgeeks.org');
+    }
+}
+)
 app.get('/',(req,res,next)=>
 {
     res.send(`Port is running at ${port}`);
