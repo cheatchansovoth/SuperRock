@@ -7,6 +7,7 @@ import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import Menu from './Pages/Menu';
 import Home from './Pages/Home';
+import Register from './Pages/Regsiter';
 function App() {
   return (
     <div className='App'>
@@ -36,6 +37,7 @@ const Navbars=()=>{
           <Route path='/contact' element={<Contact/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/menu' element={<Menu/>}></Route>
+          <Route path='/register' element={<Register/>}></Route>
         </Routes>
   </Router>
   );
