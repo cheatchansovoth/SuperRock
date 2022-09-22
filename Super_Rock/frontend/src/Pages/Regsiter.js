@@ -21,6 +21,7 @@ const Register=()=>
      const [email, setEmail]=useState("");
      const [password, setPassword]=useState("");
      
+
      const buttonAction=()=>
      {
         Axios.post('http://localhost:5000/register',{
@@ -28,10 +29,11 @@ const Register=()=>
             email:email,
             password:password
         });
+        window.alert('Data is inserted you will back to the mainpage')
+        window.location='/';
      }
     return (
         <MDBContainer>
-             
         <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
         <h1 className='mt-5 mb-5'>Sign Up</h1>
           <MDBCardBody>
@@ -73,9 +75,7 @@ const Register=()=>
                   <MDBInput label='Repeat your password' id='form4' type='password'/>
                 </div>
   
-                <MDBBtn className='mb-4' size='lg'
-                
-                onClick={buttonAction}>Register</MDBBtn>
+                <MDBBtn className='mb-4' size='lg'onClick={buttonAction}>Register</MDBBtn>
   
               </MDBCol>
   

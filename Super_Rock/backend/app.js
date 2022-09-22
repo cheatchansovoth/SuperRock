@@ -25,14 +25,15 @@ app.post('/register',async(req,res)=>
   try
   {
     await signup.save();
-    res.send("Inserted")
+    res.send({status:"ok"});
   }
   catch(err)
   {
     console.log(err);
+    res.send({status:"error"});
   }
 });
-app.post('/login',async(req,res)=>
+app.post('/login',async(req,res,next)=>
 {
     const email=req.body.email;
     const password=req.body.password;
@@ -41,9 +42,9 @@ app.post('/login',async(req,res)=>
     {
         console.log('Invalid data');
     }
-    else
+    else 
     {
-        res.redirect('https://www.geeksforgeeks.org');
+        res.send(__dirname+'/index.html')
     }
 }
 )

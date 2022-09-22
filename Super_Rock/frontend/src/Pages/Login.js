@@ -21,7 +21,7 @@ const Login=()=>
   const loginOnClick=()=>
   {
 
-    Axios.post('http://localhost:5000/login',{email:email,password:password});
+    Axios.post('http://localhost:5000/login',{email:email,password:password})
   };
     return (
         <MDBContainer className="p-3 my-5 h-custom">
@@ -45,16 +45,16 @@ const Login=()=>
             }}            
             />
   
-            <div className="d-flex justify-content-between mb-4">
+            {/* <div className="d-flex justify-content-between mb-4">
               <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
               <a href="!#">Forgot password?</a>
-            </div>
+            </div> */}
   
             <div className='text-center text-md-start mt-4 pt-2'>
               <MDBBtn className="mb-0 px-5" size='lg' onClick={loginOnClick}>Login</MDBBtn>
               <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? 
               <Link to='/register'>
-              <a href="#!" className="link-danger">Register</a>
+              Register
               </Link>
               </p>
             </div>
