@@ -13,7 +13,7 @@ const Home=()=>
                 <h1>Hungry ?</h1>
                 <h3 className='mt-4'>Why don't you get food from us ?</h3>
                 <Link to='/menu'>
-                <Button className='mt-4' >Order Now!!</Button>
+                <Button className='mt-4' >Click Menu</Button>
                 </Link>
                 </Col>
                 <Col lg={6}>
