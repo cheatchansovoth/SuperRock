@@ -33,6 +33,26 @@ app.post('/register',async(req,res)=>
     res.send({status:"error"});
   }
 });
+require('./userContact');
+const userContact=mongoose.model('UserContact');
+app.post('/contact',async(req,res)=>
+{
+    const name=req.body.name;
+    const email=req.body.email;
+    const phone=req.body.phone;
+    const text=req.body.text;
+
+    const insertData=new userContact({name:name,email:email,phone:phone,text:text});
+    try{
+        await insertData.save();
+        res.send({status:"ok"});
+    }
+    catch(err)
+    {
+        console.log(err);
+        res.send({status:"error"});
+    }
+});
 app.post('/login',async(req,res,next)=>
 {
     const email=req.body.email;
@@ -47,7 +67,7 @@ app.post('/login',async(req,res,next)=>
         console.log('user found');
     }
 }
-)
+);
 app.get('/',(req,res,next)=>
 {
     res.send(`Port is running at ${port}`);
