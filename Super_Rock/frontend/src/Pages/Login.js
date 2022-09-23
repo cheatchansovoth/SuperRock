@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
 import Axios from 'axios';
+import logo from '../asset/superrock.png'
 import {
     MDBContainer,
     MDBCol,
@@ -29,10 +30,10 @@ const Login=()=>
         <MDBRow>
   
           <MDBCol col='10' md='6'>
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="logo" />
+            <img src={logo} className="img-fluid login-logo" alt="logo"/>
           </MDBCol>
   
-          <MDBCol col='4' md='6'>
+          <MDBCol col='4' md='6' className='mt-5'>
             <h1 className='mb-5'>Login</h1>
             <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg" 
             onChange={(event)=>{
