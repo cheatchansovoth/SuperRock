@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Register.css';
 import Axios from 'axios';
@@ -20,17 +21,16 @@ const Register=()=>
      const [name, setName]=useState("");
      const [email, setEmail]=useState("");
      const [password, setPassword]=useState("");
-     
-
-     const buttonAction=()=>
+     let navigate=useNavigate();
+     const ButtonAction=()=>
      {
         Axios.post('http://localhost:5000/register',{
             name:name,
             email:email,
             password:password
-        });
-        window.alert('Data is inserted you will back to the mainpage')
-        window.location='/';
+        }).then(res=>navigate('/')
+          ).catch(err=>{alert('User is exit');
+        })
      }
     return (
         <MDBContainer>
@@ -75,7 +75,7 @@ const Register=()=>
                   <MDBInput label='Repeat your password' id='form4' type='password'/>
                 </div>
   
-                <MDBBtn className='mb-4' size='lg'onClick={buttonAction}>Register</MDBBtn>
+                <MDBBtn className='mb-4' size='lg'onClick={ButtonAction}>Register</MDBBtn>
   
               </MDBCol>
   

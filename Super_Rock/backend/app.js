@@ -21,16 +21,17 @@ app.post('/register',async(req,res)=>
   const name=req.body.name;
   const email=req.body.email;
   const password=req.body.email;
+  const oldUser=await User.findOne({email});
+  if(oldUser) return res.status(401).json({error:"This email is already in use"})
   const signup= new User({name:name,email:email,password:password});
   try
   {
     await signup.save();
-    res.send({status:"ok"});
+   return res.json({user: signup});
   }
   catch(err)
   {
-    console.log(err);
-    res.send({status:"error"});
+    return res.status.json({error: "This is error"});
   }
 });
 app.post('/login',async(req,res,next)=>
