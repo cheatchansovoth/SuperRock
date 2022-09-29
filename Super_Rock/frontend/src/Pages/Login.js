@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import Axios from 'axios';
 import logo from '../asset/superrock.png'
 import {
@@ -18,11 +18,12 @@ const Login=()=>
 {
   const [email, setEmail]=useState("");
   const [password, setPassword]=useState("");
-
+  let navigate=useNavigate();
   const loginOnClick=()=>
   {
-    Axios.post('http://localhost:5000/login',{email:email,password:password})
-    window.location='/menu';
+    Axios.post('http://localhost:5000/login',{email:email,password:password}).then(res=>navigate('/')
+    ).catch(err=>{alert('User is exit');
+  })
   };
     return (
         <MDBContainer className="p-3 my-5 h-custom">

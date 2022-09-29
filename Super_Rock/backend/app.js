@@ -41,11 +41,11 @@ app.post('/login',async(req,res,next)=>
     const user= await User.findOne({email:email});
     if(!user || user.password!==password)
     {
-        console.log('user not found')
+        return res.status(200).json({message:'Working'});
     }
     else 
     {
-        console.log('user found');
+        return res.status(401).json({message:'Duplicate user'});
     }
 }
 )
