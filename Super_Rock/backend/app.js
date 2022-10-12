@@ -16,7 +16,7 @@ const port=5000;
 require('./userDetails');
 const User= mongoose.model('UserInformation');
 
-app.post('/register',async(req,res)=>
+app.post('./model/register',async(req,res)=>
 {
   const name=req.body.name;
   const email=req.body.email;
@@ -33,8 +33,21 @@ app.post('/register',async(req,res)=>
     res.send({status:"error"});
   }
 });
-require('./userContact');
+require('./model/userContact');
 const userContact=mongoose.model('UserContact');
+require('./model/payment');
+
+const payment=mongoose.model('paymentTbl');
+
+// app.post('/payment',async(req,res)=>{
+
+//     const email=req.body.email;
+//     const holdername=req.body.holdername;
+//     const creditnumber=req.body.holdername;
+//     const expiredDate=req.body.expiredDate;
+//     const cvc=req.body.cvc
+
+// })
 app.post('/contact',async(req,res)=>
 {
     const name=req.body.name;
