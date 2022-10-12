@@ -36,7 +36,7 @@ const Register=()=>
               email:values.email,
               password:values.password
           }).then(res=>navigate('/')
-            ).catch(err=>{alert('User is exit');
+            ).catch(err=>{console.log(err);
           })
       }
     });

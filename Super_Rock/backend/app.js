@@ -6,17 +6,18 @@ const mongoose= require('mongoose');
 const app=express();
 app.use(express.json());
 app.use(cors());
-const mongoUrl="mongodb+srv://chansovoth:12345@cluster0.cuai0oi.mongodb.net/?retryWrites=true&w=majority";
+const mongoUrl="mongodb+srv://superrockteam:vfYtSk3bgUZ5XjV@cluster0.iv25o5b.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoUrl,{
     useNewUrlParser:true,
 }).then(()=>{
     console.log('DB is conntected');
 }).catch((e)=>console.log(e));
 const port=5000;
-require('./userDetails');
+
+require('./model/userDetails');
 const User= mongoose.model('UserInformation');
 
-app.post('./model/register',async(req,res)=>
+app.post('/register',async(req,res)=>
 {
   const name=req.body.name;
   const email=req.body.email;
@@ -49,6 +50,14 @@ const payment=mongoose.model('paymentTbl');
 //     const cvc=req.body.cvc
 
 // })
+require('./model/order');
+
+const order=mongoose.model('ordertable');
+
+require('./model/history');
+
+const history=mongoose.model('historytable');
+
 app.post('/contact',async(req,res)=>
 {
     const name=req.body.name;
