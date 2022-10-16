@@ -41,15 +41,15 @@ require('./model/payment');
 
 const payment=mongoose.model('paymentTbl');
 
-// app.post('/payment',async(req,res)=>{
+app.post('/payment',async(req,res)=>{
 
-//     const email=req.body.email;
-//     const holdername=req.body.holdername;
-//     const creditnumber=req.body.holdername;
-//     const expiredDate=req.body.expiredDate;
-//     const cvc=req.body.cvc
+    const Email=req.body.Email;
+    const holdername=req.body.holdername;
+    const creditnumber=req.body.holdername;
+    const expiredDate=req.body.expiredDate;
+    const cvc=req.body.cvc
 
-// })
+})
 require('./model/order');
 
 const order=mongoose.model('ordertable');

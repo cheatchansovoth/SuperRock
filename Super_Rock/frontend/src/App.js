@@ -8,6 +8,7 @@ import Login from './Pages/Login'
 import Menu from './Pages/Menu';
 import Home from './Pages/Home';
 import Register from './Pages/Regsiter';
+import Payment from './Pages/Payment';
 function App() {
   return (
     <div className='App'>
@@ -27,6 +28,7 @@ const Navbars=()=>{
                 <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>
                 <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                <Nav.Link as={Link} to="/payment">Payment</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -38,6 +40,7 @@ const Navbars=()=>{
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
+          <Route path='/payment' element={<Payment/>}></Route>
         </Routes>
   </Router>
   );
