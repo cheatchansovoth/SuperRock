@@ -35,21 +35,32 @@ app.post('/register',async(req,res)=>
     return res.status.json({error: "This is error"});
   }
 });
-require('./model/userContact');
-const userContact=mongoose.model('UserContact');
-require('./model/payment');
 
+
+require('./model/payment');
 const payment=mongoose.model('paymentTbl');
 
-app.post('/payment',async(req,res)=>{
-
-    const Email=req.body.Email;
-    const holdername=req.body.holdername;
-    const creditnumber=req.body.holdername;
+app.post('/payment',async(req,res)=>
+{
+    const email=req.body.email;
+    const creditHolderName=req.body.creditHolderName;
+    const creditCardNumber=req.body.creditCardNumber;
     const expiredDate=req.body.expiredDate;
-    const cvc=req.body.cvc
+    const cvc=req.body.cvc;
+    const newpayment= new payment({email:email,creditHolderName:creditHolderName,creditCardNumber:creditCardNumber,expiredDate:expiredDate,cvc:cvc});
+    try
+    {
+        await newpayment.save();
+    return res.json({user: newpayment});
+    }
+    catch(err)
+    {
+        return res.status.json({error: "This is error"});
+    }
+});
 
-})
+
+
 require('./model/order');
 
 const order=mongoose.model('ordertable');
@@ -57,6 +68,9 @@ const order=mongoose.model('ordertable');
 require('./model/history');
 
 const history=mongoose.model('historytable');
+
+require('./model/userContact');
+const userContact=mongoose.model('UserContact');
 
 app.post('/contact',async(req,res)=>
 {

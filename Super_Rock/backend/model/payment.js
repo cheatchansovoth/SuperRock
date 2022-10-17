@@ -2,11 +2,11 @@ const mongoose=require('mongoose');
 
 const userDetailsSchema= new mongoose.Schema(
     {
-        Email:String,
-        CreditHolderName: String,
-        CreditCardNumber: String,
-        ExpiredDate: Date,
-        CVC:Number,
+        email:String,
+        creditHolderName: String,
+        creditCardNumber: String,
+        expiredDate: Date,
+        cvc:Number,
     },
     {
         collection:'paymentTbl'
