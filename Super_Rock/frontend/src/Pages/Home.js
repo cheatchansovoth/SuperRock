@@ -14,7 +14,9 @@ const Home=()=>
                     <Col sm={12} className='mt-5'><h1><strong>Are you hungry ?</strong></h1></Col>
                     <Col sm={12} className='mt-2'><h1>Don't wait</h1></Col>
                     <Col sm={12} className='mt-2'><h1>Let start to order food now!</h1></Col>
+                    <Link to='menu'>
                     <Button  variant="light" className='w-25 m-3'>Check Out Menu</Button>
+                    </Link>
                 </Row>
             </Container>
         </div>

@@ -8,6 +8,7 @@ import Login from './Pages/Login'
 import Menu from './Pages/Menu';
 import Home from './Pages/Home';
 import Register from './Pages/Regsiter';
+import Admin from './Pages/Admin';
 function App() {
   return (
     <div className='App'>
@@ -38,6 +39,7 @@ const Navbars=()=>{
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
+          <Route path='/admin/post' element={<Admin/>}></Route>
         </Routes>
   </Router>
   );

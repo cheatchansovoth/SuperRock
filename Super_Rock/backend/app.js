@@ -1,6 +1,8 @@
 const express =require('express')
 const bodyparser= require('body-parser');
 const cors=require('cors');
+const multer=require('multer');
+const path=require('path');
 const mongoose= require('mongoose');
 
 const app=express();
@@ -14,6 +16,17 @@ mongoose.connect(mongoUrl,{
 }).catch((e)=>console.log(e));
 const port=5000;
 
+const storage=multer.diskStorage({
+    destination:(req,file,callback)=>{
+        callback(null,"../frontend/public/images/");
+    },
+    filename:(req,file,callback)=>
+    {
+        console.log(file)
+        callback(null,file.originalname);
+    }
+})
+const uploadImage=multer({storage:storage});
 require('./model/userDetails');
 const User= mongoose.model('UserInformation');
 
@@ -54,6 +67,30 @@ require('./model/order');
 
 const order=mongoose.model('ordertable');
 
+require('./model/menu');
+
+const menuOrder=mongoose.model('articleImg');
+
+app.post('/articleUpload',uploadImage.single('articleImg'),async(req,res)=>
+{
+    const newArticle=new menuOrder({articlename:req.body.articlename,description:req.body.description,type:req.body.type,price:req.body.price,articleimage:req.file.originalname})
+    await newArticle.save();
+
+})
+app.get('/cardTest', async (req,res)=>
+{
+    menuOrder.find({},(err,result)=>
+  {
+    if(err)
+    {
+      res.send(err);
+    }
+    else
+    {
+      res.send(result)
+    }
+  })
+})
 require('./model/history');
 
 const history=mongoose.model('historytable');
