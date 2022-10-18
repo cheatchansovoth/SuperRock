@@ -43,8 +43,8 @@ const Register=()=>
 
     return (
         <MDBContainer>
-        <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
-        <h1 className='mt-5 mb-5'>Sign Up</h1>
+        <MDBCard className='text-black m-5 text-center' style={{borderRadius: '25px'}}>
+        <h1 className='mt-5 mb-5'>SIGN UP</h1>
           <MDBCardBody>
             <form onSubmit={Formik.handleSubmit}>
             <MDBRow>
