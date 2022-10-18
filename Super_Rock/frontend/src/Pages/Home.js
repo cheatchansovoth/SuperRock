@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {Container,Row,Col,Button} from 'react-bootstrap';
 import TredingMenu from './Tredingmenu';
 import './Home.css'
-import { BsGithub,BsFacebook } from 'react-icons/bs';
+import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
 const Home=()=>
 {
     return (
@@ -34,22 +34,22 @@ const Home=()=>
         <div className='Container-bot'>
         <Container>
             <Row className=''>
-                <Col sm={12} className='mt-5 mb-5'><h1>CONTACTS</h1></Col>
+                <Col sm={12} className='mt-5 mb-5'><h1>FOLLOW US</h1></Col>
                 <Col lg={3}><h1>
                     <BsGithub /></h1>
-                    <h3>Our Office</h3>
+                    <h3>Follow us Github</h3>
                 </Col>
                 <Col lg={3}><h1>
                     <BsFacebook /></h1>
-                    <h3>Our Office</h3>
+                    <h3>Follow us Facebook</h3>
                 </Col>
                 <Col lg={3}><h1>
-                    <BsGithub /></h1>
-                    <h3>Our Office</h3>
+                    <BsTwitter /></h1>
+                    <h3>Follow us BsTwitter</h3>
                 </Col>
                 <Col lg={3}><h1>
-                    <BsGithub /></h1>
-                    <h3>Our Office</h3>
+                    <BsTwitch /></h1>
+                    <h3>Watch us on Twitch</h3>
                 </Col>
             </Row>
         </Container>
