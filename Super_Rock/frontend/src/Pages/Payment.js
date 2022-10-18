@@ -52,7 +52,7 @@ const Payment=()=>
             <MDBRow>
 
               {/* Billing Address column */}
-              {/* <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
+              <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
               <h1 className='mt-5 mb-5'>Billing Address</h1>
                 <div className="d-flex flex-row align-items-center mb-4 ">
                   <MDBIcon fas icon="user me-3" size='lg'/>
@@ -85,7 +85,7 @@ const Payment=()=>
                 </div>
                 {Formik.errors.confirm && Formik.touched.confirm ? <p>{Formik.errors.confirm}</p>:null}
   
-              </MDBCol> */}
+              </MDBCol>
 
               {/* Payment column */}
   
