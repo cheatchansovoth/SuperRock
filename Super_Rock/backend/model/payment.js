@@ -9,8 +9,8 @@ const userDetailsSchema= new mongoose.Schema(
         cvc:Number,
     },
     {
-        collection:'paymentTbl'
+        collection:'PaymentTbl'
     }
 );
 
-mongoose.model('paymentTbl',userDetailsSchema);
+mongoose.model('PaymentTbl',userDetailsSchema);

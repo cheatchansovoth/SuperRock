@@ -38,7 +38,7 @@ app.post('/register',async(req,res)=>
 
 
 require('./model/payment');
-const Payment=mongoose.model('paymentTbl');
+const Payment=mongoose.model('PaymentTbl');
 
 app.post('/payment',async(req,res)=>
 {
