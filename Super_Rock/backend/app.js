@@ -38,7 +38,7 @@ app.post('/register',async(req,res)=>
 
 
 require('./model/payment');
-const payment=mongoose.model('paymentTbl');
+const Payment=mongoose.model('paymentTbl');
 
 app.post('/payment',async(req,res)=>
 {
@@ -47,7 +47,7 @@ app.post('/payment',async(req,res)=>
     const creditCardNumber=req.body.creditCardNumber;
     const expiredDate=req.body.expiredDate;
     const cvc=req.body.cvc;
-    const newpayment= new payment({email:email,creditHolderName:creditHolderName,creditCardNumber:creditCardNumber,expiredDate:expiredDate,cvc:cvc});
+    const newpayment= new Payment({email:email,creditHolderName:creditHolderName,creditCardNumber:creditCardNumber,expiredDate:expiredDate,cvc:cvc});
     try
     {
         await newpayment.save();

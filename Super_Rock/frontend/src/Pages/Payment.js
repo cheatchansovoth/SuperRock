@@ -37,7 +37,6 @@ const Payment=()=>
                 creditCardNumber:values.creditCardNumber,
                 expiredDate:values.expiredDate,
                 cvc:values.cvc
-          
           }).then(res=>navigate('/')
             ).catch(err=>{console.log(err);
           })
