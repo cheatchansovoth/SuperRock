@@ -1,0 +1,24 @@
+/* .App {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+} */
+.Container-Top h1
+{
+  font-weight: 900;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card-img
+{
+  height: 180px;
+}
+.about-image
+{
+  width: 720px;
+  height: 530px;
+}
+.about-section
+{
+  margin-top: 10%;
+}

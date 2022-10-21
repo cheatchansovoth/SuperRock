@@ -1,0 +1,17 @@
+.Container-Top
+{
+    background:url('../asset/6221139.jpg');
+    background-size: cover;
+    position: relative;
+}
+.Home-Section-1
+{
+    width: 720px;
+    height: 480px;
+}
+.Container-bot
+{
+    height: 50vh;
+    background-color: #cab9b9;
+    text-align: center;
+}
