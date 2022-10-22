@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 import Axios from 'axios';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
+import './Menu.css'
+import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
 
 const Menu=()=>
 {
@@ -19,9 +21,10 @@ const Menu=()=>
     return (<motion.div
         initial={{width: 0}}
         animate={{width: "100%"}}
-        exit={{ x: window.innerWidth, transition:{duration: 0.1}}}
-    
+        exit={{ x: window.innerWidth, transition:{duration: 0.1}}}      
+                   
     >
+        <div className='Menubg'>
         <Container className='mt-5'>
             <Row>
             {cardDetails.map((val,key)=>
@@ -47,6 +50,30 @@ const Menu=()=>
                             })}
             </Row>
         </Container>
+        </div>
+        <div className='Container-bot'>
+        <Container>
+            <Row className=''>
+                <Col sm={12} className='mt-5 mb-5'><h1>FOLLOW US</h1></Col>
+                <Col lg={3}><h1>
+                    <BsGithub /></h1>
+                    <h3>Follow us Github</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsFacebook /></h1>
+                    <h3>Follow us Facebook</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsTwitter /></h1>
+                    <h3>Follow us BsTwitter</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsTwitch /></h1>
+                    <h3>Watch us on Twitch</h3>
+                </Col>
+            </Row>
+        </Container>
+        </div>
     </motion.div>
        
     )

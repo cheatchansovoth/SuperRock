@@ -1,21 +1,9 @@
-.Login-Section
-{
-    margin-top: 10%;
-    
-}
-.login-logo
-{
-    width: 380px;
-    height: auto;
-}
-
-.loginbg{
+.Menubg{
     
     padding: 1rem;
     background-image: url("../asset/greek-food.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;
-    width: 100%;
     
 }

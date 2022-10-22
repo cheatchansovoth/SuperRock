@@ -13,6 +13,8 @@ import {
   from 'mdb-react-ui-kit';
 import './Login.css';
 import {motion} from 'framer-motion';
+import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
+import {Container,Row,Col,Button} from 'react-bootstrap';
 
 const Login=()=>
 {
@@ -33,12 +35,14 @@ const Login=()=>
     }
   });
     return (
+      
         <motion.MDBContainer className="p-3 my-5 h-custom"
         initial={{width: 0}}
         animate={{width: "100%"}}
         exit={{ x: window.innerWidth, transition:{duration: 0.1}}}
         
         >
+        <div className='loginbg'>
         <form onSubmit={Formik.handleSubmit}>
         <MDBRow>
           <MDBCol col='10' md='6'>
@@ -64,6 +68,30 @@ const Login=()=>
   
         </MDBRow>
         </form>
+        </div>
+        <div className='Container-bot'>
+        <Container>
+            <Row className=''>
+                <Col sm={12} className='mt-5 mb-5'><h1>FOLLOW US</h1></Col>
+                <Col lg={3}><h1>
+                    <BsGithub /></h1>
+                    <h3>Follow us Github</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsFacebook /></h1>
+                    <h3>Follow us Facebook</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsTwitter /></h1>
+                    <h3>Follow us BsTwitter</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsTwitch /></h1>
+                    <h3>Watch us on Twitch</h3>
+                </Col>
+            </Row>
+        </Container>
+        </div>
       </motion.MDBContainer>
                 );
 }

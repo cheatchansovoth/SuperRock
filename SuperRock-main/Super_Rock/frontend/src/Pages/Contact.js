@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col,Form,Button} from 'react-bootstrap';
 import Axios from 'axios';
 import {motion} from 'framer-motion';
+import './Contact.css'
+import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
 
 const Contact=()=>
 {
@@ -30,6 +32,7 @@ const Contact=()=>
         exit={{ x: window.innerWidth, transition:{duration: 0.1}}}
         
         >
+            <div className='contactbg'>
             <Container>
                 <Row className='mt-5'>
                     <Col><h1>Contact Us</h1></Col>
@@ -101,7 +104,32 @@ const Contact=()=>
                     </Col>
                 </Row>
             </Container>
+            </div>
+            <div className='Container-bot'>
+        <Container>
+            <Row className=''>
+                <Col sm={12} className='mt-5 mb-5'><h1>FOLLOW US</h1></Col>
+                <Col lg={3}><h1>
+                    <BsGithub /></h1>
+                    <h3>Follow us Github</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsFacebook /></h1>
+                    <h3>Follow us Facebook</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsTwitter /></h1>
+                    <h3>Follow us BsTwitter</h3>
+                </Col>
+                <Col lg={3}><h1>
+                    <BsTwitch /></h1>
+                    <h3>Watch us on Twitch</h3>
+                </Col>
+            </Row>
+        </Container>
+        </div>
         </motion.div>
+        
     );
 }
 export default Contact;

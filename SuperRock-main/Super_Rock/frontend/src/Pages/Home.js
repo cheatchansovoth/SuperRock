@@ -30,7 +30,8 @@ const Home=()=>
                 </Row>
             </Container>
         </div>
-        <Container>
+        <div  className='homebg'>
+        <Container >
             
             <Row className='mt-5'>
             
@@ -51,6 +52,7 @@ const Home=()=>
                 
             </Row>
         </Container>
+        </div>
         <div className='Container-bot'>
         <Container>
             <Row className=''>
