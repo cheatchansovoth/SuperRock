@@ -8,6 +8,7 @@ const Home=()=>
 {
     return (
         <div>
+<<<<<<< Updated upstream
         <div className='Container-Top'>
             <Container>
                 <Row>
@@ -54,6 +55,9 @@ const Home=()=>
                     <h3>Watch us on Twitch</h3>
                 </Col>
             </Row>
+=======
+        <Container className='Container'>
+>>>>>>> Stashed changes
         </Container>
         </div>
         </div>
