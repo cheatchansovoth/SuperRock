@@ -24,13 +24,90 @@ const Payment=()=>
             }
         return (   
         <div>
-            <Container>
+          <Container>
                 <Row className='mt-5'>
                     <Col><h1>Payment</h1></Col>
                 </Row>
                 <Row>
                 <Col className='mt-5'>
-                        <p>Super Rock Resrutrant</p>
+                        <h1>Billing Address</h1>
+                    
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col lg={4}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder='john@gmail.com'
+                            onChange={(event)=>
+                                {
+                                  setEmail(event.target.value);
+                                }}                                                
+                        />
+                        <Form.Text className="text-muted">
+                        </Form.Text>
+                    </Form.Group>
+                    </Col>
+                    <Col lg={4}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Name on Card</Form.Label>
+                        <Form.Control type="text" placeholder='John Smith'
+                            onChange={(event)=>
+                                {
+                                  setCreditHolderName(event.target.value);
+                                }}                           
+                        />
+                        <Form.Text className="text-muted">
+                        </Form.Text>
+                    </Form.Group>
+                    </Col>
+                    <Col lg={4}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Credit Card Number</Form.Label>
+                        <Form.Control type="password" maxLength="12" placeholder='1111-2222-3333-4444'
+                            onChange={(event)=>
+                                {
+                                  setCreditCardNumber(event.target.value);
+                                }}                           
+                        />
+                        <Form.Text className="text-muted">
+                        </Form.Text>
+                    </Form.Group>
+                    </Col>
+                    <Col lg={4}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Expire Date</Form.Label>
+                        <Form.Control type="date" 
+                            onChange={(event)=>
+                                {
+                                  setExpiredDate(event.target.value);
+                                }}                           
+                        />
+                        <Form.Text className="text-muted">
+                        </Form.Text>
+                    </Form.Group>
+                    </Col>
+                    <Col lg={4}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>CVC</Form.Label>
+                        <Form.Control type="password" maxLength="3"
+                            onChange={(event)=>
+                                {
+                                  setCvc(event.target.value);
+                                }}                           
+                        />
+                        <Form.Text className="text-muted">
+                        </Form.Text>
+                    </Form.Group>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                <Col className='mt-5'>
+                        <h1>Payment Details</h1>
                     
                     </Col>
                 </Row>
