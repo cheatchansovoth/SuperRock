@@ -35,7 +35,7 @@ const Login=()=>
     }
   });
     return (
-
+        
         <motion.MDBContainer className="p-3 my-5 h-custom"
         initial={{width: 0}}
         animate={{width: "100%"}}
@@ -47,7 +47,7 @@ const Login=()=>
         <form onSubmit={Formik.handleSubmit}>
         <MDBRow>
           <MDBCol col='10' md='6'>
-            <img src={logo} className="img-fluid login-logo" alt="logo"/>
+            <img src={logo} className="img-logo" alt="logo"/>
           </MDBCol>
   
           <MDBCol col='4' md='6' className='mt-5'>
@@ -93,6 +93,7 @@ const Login=()=>
             </Row>
         </Container>
         </div>
+        
       </motion.MDBContainer>
                 );
 }

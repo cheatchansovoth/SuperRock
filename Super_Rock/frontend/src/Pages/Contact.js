@@ -121,7 +121,7 @@ const Contact=()=>
                                 }}                       
                     ></textarea>
                     </Col>
-                    <Col className='mt-5'>
+                    <Col className='mt-5 mb-5'>
                         <Button onClick={sumbitButton}>Submit</Button>
                     </Col>
                 </Row>
