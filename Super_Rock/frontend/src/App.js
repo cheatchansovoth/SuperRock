@@ -9,6 +9,16 @@ import Menu from './Pages/Menu';
 import Home from './Pages/Home';
 import Register from './Pages/Regsiter';
 import Admin from './Pages/Admin';
+import Payment from './Pages/Payment';
+
+const Logout=()=>
+{
+  // window.localStorage.removeItem('token');
+  window.localStorage.clear();;
+  window.location.reload();
+}
+const storeData=JSON.parse(localStorage.getItem('token'));
+
 function App() {
   return (
     <div className='App'>
@@ -27,7 +37,7 @@ const Navbars=()=>{
               <Nav className="text-center">
                 <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>
-                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                <Nav.Link as={Link} to="/login">{storeData? <a onClick={Logout}>Logout</a>: <a>Login</a>}</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -37,9 +47,10 @@ const Navbars=()=>{
           <Route path='/about' element={<About/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
-          <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/admin/post' element={<Admin/>}></Route>
+          <Route path='/menu' element={<Menu/>}></Route>
+          <Route path='/user/payment' element={<Payment/>}></Route>
         </Routes>
   </Router>
   );

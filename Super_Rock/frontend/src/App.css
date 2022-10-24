@@ -22,3 +22,8 @@
 {
   margin-top: 10%;
 }
+.ErorrMessage
+{
+  color:red;
+  font-size: 1.5rem;
+}

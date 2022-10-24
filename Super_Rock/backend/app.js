@@ -52,21 +52,29 @@ require('./model/userContact');
 const userContact=mongoose.model('UserContact');
 require('./model/payment');
 
-const payment=mongoose.model('paymentTbl');
 
-// app.post('/payment',async(req,res)=>{
-
-//     const email=req.body.email;
-//     const holdername=req.body.holdername;
-//     const creditnumber=req.body.holdername;
-//     const expiredDate=req.body.expiredDate;
-//     const cvc=req.body.cvc
-
-// })
 require('./model/order');
 
 const order=mongoose.model('ordertable');
 
+app.post('/user/order',async (req,res)=>
+{
+    const FoodID=req.body.FoodID
+    const UserID=req.body.FoodID
+    const Phone=req.body.Phone
+    const pickuptyle=req.body.pickuptyle
+
+    const newOrder= new order({FoodID:FoodID,UserID:UserID,Phone:Phone,pickuptyle:pickuptyle})
+    try 
+    {
+        await newOrder.save();
+        res.send({status:'okay'})
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+})
 require('./model/menu');
 
 const menuOrder=mongoose.model('articleImg');
@@ -119,20 +127,20 @@ app.post('/login',async(req,res,next)=>
     const password=req.body.password;
     const user= await User.findOne({email:email});
 
-    if(user)
-    {
-        if(user.password==password)
+        if(user)
         {
-            return res.status(200).json({message:'Work'});
+            if(user.password==password)
+            {
+                return res.status(200).json({UserInfo:user});
+            }
+            else 
+            {
+                return res.status(401).json({message:'Incorrect Password'});
+            }
         }
-        else 
-        {
-            return res.status(401).json({message:'error'});
-        }
-    }
     else 
     {
-        return res.status(401).json({message:'sth wrong'});
+        return res.status(401).json({message:'User/Password does not exists'});
     }
 }
 );
