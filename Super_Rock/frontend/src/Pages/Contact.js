@@ -5,7 +5,7 @@ import Axios from 'axios';
 import {motion} from 'framer-motion';
 import './Contact.css'
 import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
-
+import Img from '../asset/OIP.jpg'
 
 const Contact=()=>
 {
@@ -35,24 +35,45 @@ const Contact=()=>
         >
             <div className='contactbg'>
             <Container>
+               <Row className='mt-5'>
+                <Col>
+                <img className="photo" src={Img}></img>
+                
+                </Col>
+
+                <Col>
                 <Row className='mt-5'>
                     <Col><h1>Contact Us</h1></Col>
                 </Row>
                 <Row>
                 <Col className='mt-5'>
-                        <p>Super Rock Resrutrant</p>
-                        <p>We offer a wide range of food options for our customers. Our range varies from a special breakfeast menu, 
+                        <p style={{ fontSize: 25 }}>Super Rock Resrutrant</p>
+                        <p style={{ fontSize: 18 }}>We offer a wide range of food options for our customers. Our range varies from a special breakfeast menu, 
                             a special lunch menu and our very popular dinner menu. We will make that our serive satisfy your needs 
                             and that you have the best possible experience</p>
-                        <p>Address: 890 John Road</p>
-                        <p>Phone: 90181489104</p>
-                        <p>Email: super_rock@aut.com</p>
+                        
+                        <p>
+                           <strong>Phone:</strong>
+                           "&nbsp; 90181489104"
+                           <br/>
+                           <strong>Fax:</strong>
+                           "&nbsp;03 442 4678"
+                           <br/>
+                           <strong>Email:</strong>
+                           <span>&nbsp;</span>
+                           <a href="super_rock@aut.com">
+                           super_rock@aut.com
+                           </a>
+                        </p>
                     
                     </Col>
+                    
+                </Row>
+                </Col>
                 </Row>
             </Container>
             <Container>
-                <Row>
+                <Row className='mt-5'>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>FullName</Form.Label>
