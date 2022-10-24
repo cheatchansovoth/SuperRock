@@ -23,11 +23,28 @@ const About=()=>
                     </Col>
                     <Col lg={4} className='m-5 '>
                         <div className='mt-5'>
-                    <h1>ABOUT US</h1>
-                      All of our menu items are inspired by SiChuan cuisine and have been created by our head chef Kenny after studying authentic SiChuan cuisine in China. Not only do we have fresh flown-in seafood from the northeast,
-                    but we also have a variety of handcrafted cocktails, wine, and beer to choose from.
+                    <h1 >ABOUT US</h1>
+                    <p>All of our menu items are inspired by SiChuan cuisine and have been created by our head chef Kenny after studying authentic SiChuan cuisine in China. Not only do we have fresh flown-in seafood from the northeast,
+                    but we also have a variety of handcrafted cocktails, wine, and beer to choose from.</p>
+                    <p>
+                    Discover a true taste of Asia, at Auckland’s premier Chinese restaurant and bar. Super Rock (meaning band) is the allure of something beautiful and precious. It reflects the gathering and sourcing of the best ingredients, a connection to the elements of nature, and our passion to deliver guests a vibrant and rewarding premium Chinese dining experience.
+                    </p>
                     </div>
                     </Col>
+                </Row>
+                <Row>
+                <Col lg={4} className='m-5 '>
+                        <div className='mt-5'>
+                    <h1>Inspiration</h1>
+                    <p>Explore traditional signature dishes, like our impressive range of dim sum or dumplings, our fruit wood-roasted Peking duck or Manuka honey glazed char siew pork, alongside modern takes on Asian fusion cuisine like our crispy tabasco prawns. Gather with family and friends and feast on our popular yum cha service, listed as one of the best in the city. Our extensive wine list has been curated by New Zealand's only Master Sommelier, Cameron Douglas and features the best of New Zealand and international wines. Let our knowledgeable team help you find the perfect wine for your food and your palate.</p>
+                    <p>
+                    Our Super Rock Bar offers an exclusive range of spirits, as well as a specially developed cocktail list. If you want a traditional taste of China, we have the largest range of Maotai (Baiju) in New Zealand. Maotai is a Chinese spirit that can be enjoyed neat or in one of our Maotai infused cocktails.
+                    </p>
+                    </div>
+                </Col>
+                <Col lg={6}>
+                    <img src={photo} alt="" className='about-image'/>
+                </Col>
                 </Row>
             </Container>
             </div>

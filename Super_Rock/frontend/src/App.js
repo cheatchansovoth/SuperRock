@@ -14,6 +14,7 @@ function App() {
 }
 const Navbars=()=>{
   return (
+
     <Router>
         <Navbar bg="primary" expand="lg" variant="dark">
           <Container>
@@ -30,6 +31,7 @@ const Navbars=()=>{
         </Navbar>
         <AnimatedRoutes />
   </Router>
+  
   );
 }
 
