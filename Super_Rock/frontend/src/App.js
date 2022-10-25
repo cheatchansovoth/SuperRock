@@ -1,14 +1,10 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button,Container,Nav,Navbar,NavDropdown,NavLink} from 'react-bootstrap';
-import {BrowserRouter as Router, Route, Routes,Link} from 'react-router-dom';
-import About from './Pages/About'
-import Contact from './Pages/Contact'
-import Login from './Pages/Login'
-import Menu from './Pages/Menu';
-import Home from './Pages/Home';
-import Register from './Pages/Regsiter';
-import Admin from './Pages/Admin';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
+import AnimatedRoutes from './AnimatedRoutes';
+
 function App() {
   return (
     <div className='App'>
@@ -18,6 +14,7 @@ function App() {
 }
 const Navbars=()=>{
   return (
+
     <Router>
         <Navbar bg="primary" expand="lg" variant="dark">
           <Container>
@@ -32,16 +29,9 @@ const Navbars=()=>{
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <Routes>
-        <Route path='/' element={<Home/>}></Route>
-          <Route path='/about' element={<About/>}></Route>
-          <Route path='/contact' element={<Contact/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
-          <Route path='/menu' element={<Menu/>}></Route>
-          <Route path='/register' element={<Register/>}></Route>
-          <Route path='/admin/post' element={<Admin/>}></Route>
-        </Routes>
+        <AnimatedRoutes />
   </Router>
+  
   );
 }
 

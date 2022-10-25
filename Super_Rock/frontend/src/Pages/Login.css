@@ -7,3 +7,18 @@
     width: 380px;
     height: auto;
 }
+
+.loginbg{
+    
+    padding: 1rem;
+    background-image: url("../asset/192-1923893_restaurant-wallpapers-creative-restaurant-wallpapers-restaurant-website-food.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 1860px;
+    
+}
+.img-logo{
+    height: 500px;
+    width: 700px; 
+}

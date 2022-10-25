@@ -15,3 +15,14 @@
     background-color: #cab9b9;
     text-align: center;
 }
+
+.homebg{
+    
+    padding: 1rem;
+    background-image: url("../asset/pngtree-tea-restaurant-menu-background-material-picture-image_1107761.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    
+}
