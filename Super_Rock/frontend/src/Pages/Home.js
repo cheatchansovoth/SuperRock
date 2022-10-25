@@ -4,17 +4,10 @@ import {Container,Row,Col,Button} from 'react-bootstrap';
 import TredingMenu from './Tredingmenu';
 import './content/Home.css'
 import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
-import {motion} from 'framer-motion';
-import videoBg from '../asset/istockphoto-504093704-640_adpp_is.mp4'
-
 const Home=()=>
 {
     return (
-        <motion.div
-        initial={{width: 0}}
-        animate={{width: "100%"}}
-        exit={{ x: window.innerWidth, transition:{duration: 0.2}}}
-        >
+        <div>
         <div className='Container-Top'>
             <Container>
                 <Row>
@@ -27,29 +20,19 @@ const Home=()=>
                 </Row>
             </Container>
         </div>
-        <div className='homebg'>
         <Container>
-            <Row className='mt-5 mb-5'>
-            <Col sm={12}><h1>OUR CHEFS</h1></Col>
+            <Row className='mt-5'>
+                <Col sm={12}><h1>OUR CHEFS</h1></Col>
                 <Col sm={12} lg={6}>
-                <video src={videoBg} autoPlay loop muted/>
-                    <Col className='mt-5'>
-                    <p style={{ fontSize: 18 }}>Super Rock Restaurant was established in 2005 on the Queen of Auckland's largest cruise ship. The restaurant's most famous food is Chinese food. There are world-famous Manchu and Han banquets. At the same time, the world-famous rock band Super Rock comes to perform every week. We have reached a 20-year contract with the band, which is also the origin of our restaurant name.</p>                   
-                    <p style={{ fontSize: 18 }}>Don’t wait for a special occasion to dine out – we’ve given you our pick of the best, across the casual and the intimate, the edgy and the thought-provoking to the elegant and the luxurious. In every one of these establishments you will find an experience that delivers on its promise to you, and an opportunity to explore a unique understanding of the many flavours of Aotearoa.</p>
-                    </Col>
-                </Col>
-                <Col sm={12} lg={6}>
-                    <img src='https://cdn.shopify.com/s/files/1/0630/9399/7799/t/2/assets/salute_cropped-1646190581077.png?v=1646190582'></img>
-                  <Col className='mt-5'>
                     <h1>Kenny</h1>
                     <h3>Chef</h3>
-                    <p style={{ fontSize: 18 }}>Synonymous with breaking Michelin stars records, Kenny currently holds 17 Michelin stars. This makes him the current living chef with the most Michelin stars in the world.</p>
-                    <p style={{ fontSize: 18 }}>In addition to being known for world-class Chinese cuisine, Kenny is the only chef on this list who has sent his food into space. In 2015, Kenny sent meals to astronauts orbiting Earth aboard the International Space Station, an accomplishment that Kenny said he viewed as conquering ‘ the final frontier (of cooking)’.</p>
-                </Col>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </Col>
+                <Col sm={12} lg={6}>
+                    <img src='https://cdn.shopify.com/s/files/1/0630/9399/7799/t/2/assets/salute_cropped-1646190581077.png?v=1646190582'></img>
                 </Col>
             </Row>
         </Container>
-        </div>
         <div className='Container-bot'>
         <Container>
             <Row className=''>
@@ -73,7 +56,7 @@ const Home=()=>
             </Row>
         </Container>
         </div>
-        </motion.div>
+        </div>
 
     )
 }

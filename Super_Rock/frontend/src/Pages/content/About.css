@@ -43,15 +43,3 @@ body{
     width: 500px;
     margin: 100px auto;
 } */
-
-.aboutbg{
-    
-    padding: 1rem;
-    background-image: url("../asset/greek-food.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    
-}
-

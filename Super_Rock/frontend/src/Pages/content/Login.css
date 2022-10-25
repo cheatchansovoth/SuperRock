@@ -7,18 +7,3 @@
     width: 380px;
     height: auto;
 }
-
-.loginbg{
-    
-    padding: 1rem;
-    background-image: url("../asset/greek-food.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    
-}
-.img-logo{
-    height: 500px;
-    width: 700px; 
-}

@@ -2,8 +2,10 @@ import React,{useEffect,useState}from 'react';
 import {Container,Row,Col,Button} from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Axios from 'axios';
-import {Link} from 'react-router-dom';
-
+import {Link,useNavigate} from 'react-router-dom';
+import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import { BsCartCheckFill } from "react-icons/bs";
+import './content/Menu.css'
 const Menu=()=>
 {
     const [cardDetails,setCardDetails]=useState([]);
@@ -35,14 +37,7 @@ const Menu=()=>
             setCardDetails(response.data);
         })
     },[])
-    return (<motion.div
-        initial={{width: 0}}
-        animate={{width: "100%"}}
-        exit={{ x: window.innerWidth, transition:{duration: 0.2}}}   
-    
-    
-    >
-        <div className='Menubg'>
+    return (<div>
         <Container className='mt-5'>
             <Link to='/cartView'>
             </Link>
@@ -66,6 +61,44 @@ const Menu=()=>
                     </Col>
                      )
                  })}
+            </Row>
+        </Container>
+        <Container>
+            <Row>
+                <Col className='text-center mt-5'>
+                    {addCart.length>0 &&
+                    <React.Fragment>
+                    <h3>ITEM IN YOUR CART <BsCartCheckFill/>({addCart.length}) </h3>
+                    <MDBTable className='mt-5'>
+                    <MDBTableHead>
+                        <tr>
+                        <th scope='col'>Item</th>
+                        <th scope='col'>Name</th>
+                        <th scope='col'>Price</th>
+                        <th scope='col'>Action</th>
+                        </tr>
+                    </MDBTableHead>
+                    <MDBTableBody>
+                        {addCart.map((product,key)=>
+                        {
+                            return (
+                                <React.Fragment key={key}>
+                                    <tr>
+                                    <th scope='row'><Card.Img  src={`/images/${product.articleimage}`} className='cart-image'/></th>
+                                    <td>{product.articlename}</td>
+                                    <td>${product.price}</td>
+                                    <td><Button variant='danger' onClick={()=>removeProduct(product)}>Remove</Button></td>
+                                    </tr>
+                                </React.Fragment>
+                            )
+                        })}
+                    </MDBTableBody>
+                    <h3 className='mt-3'>Total Price: ${totalPrice}</h3>
+                    <Button variant='success' onClick={handleCheckOut}>Check Out</Button>
+                    </MDBTable>
+                    </React.Fragment>
+                    }
+                </Col>
             </Row>
         </Container>
     </div>
