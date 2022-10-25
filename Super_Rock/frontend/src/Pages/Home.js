@@ -10,7 +10,11 @@ import videoBg from '../asset/istockphoto-504093704-640_adpp_is.mp4'
 const Home=()=>
 {
     return (
-        <div>
+        <motion.div
+        initial={{width: 0}}
+        animate={{width: "100%"}}
+        exit={{ x: window.innerWidth, transition:{duration: 0.2}}}
+        >
         <div className='Container-Top'>
             <Container>
                 <Row>
@@ -67,9 +71,6 @@ const Home=()=>
                     <h3>Watch us on Twitch</h3>
                 </Col>
             </Row>
-=======
-        <Container className='Container'>
->>>>>>> Stashed changes
         </Container>
         </div>
         </motion.div>
