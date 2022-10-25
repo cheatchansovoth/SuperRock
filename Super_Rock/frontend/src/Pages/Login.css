@@ -11,11 +11,11 @@
 .loginbg{
     
     padding: 1rem;
-    background-image: url("../asset/192-1923893_restaurant-wallpapers-creative-restaurant-wallpapers-restaurant-website-food.jpg");
+    background-image: url("../asset/greek-food.jpg");
     background-size: cover;
     background-position: center;
-    height: 1000px;
-    width: 1860px;
+    height: 100%;
+    width: 100%;
     
 }
 .img-logo{

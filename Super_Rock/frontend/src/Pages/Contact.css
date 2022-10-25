@@ -1,10 +1,10 @@
 .contactbg{
     
     padding: 1rem;
-    background-image: url("../asset/contact-us-customer-support-service-260nw-420893623.webp");
+    background-image: url("../asset/greek-food.jpg");
     background-size: cover;
     background-position: center;
-    height: 1000px;
+    height: 100%;
     width: 100%;
     
 }
