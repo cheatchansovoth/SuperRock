@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Register.css';
+import './content/Register.css';
 import {useFormik} from 'formik';
 import { basicSchema } from "../schema/index";
 import Axios from 'axios';
@@ -35,7 +35,7 @@ const Register=()=>
               name:values.name,
               email:values.email,
               password:values.password
-          }).then(res=>navigate('/')
+          }).then(res=>navigate('/login')
             ).catch(err=>{console.log(err);
           })
       }

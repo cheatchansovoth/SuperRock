@@ -3,19 +3,36 @@ import {Container,Row,Col,Button} from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Axios from 'axios';
 import {Link} from 'react-router-dom';
-import {motion} from 'framer-motion';
-import './Menu.css'
-import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
 
 const Menu=()=>
 {
     const [cardDetails,setCardDetails]=useState([]);
+    const [addCart,setAddCart]=useState([]);
+    let navigate=useNavigate();
+    const addProduct=(product)=>
+    {
+        const storeData=JSON.parse(localStorage.getItem('token'));
+        if(!storeData)
+        {
+            navigate('/login')
+        }
+        setAddCart([...addCart,{...product}]);
+    }
+    const removeProduct=(productRemove)=>{
+        setAddCart(addCart.filter((product)=>product!==productRemove));
+    }
+    let totalPrice=addCart.reduce((a,v) =>  a = a + v.price , 0 );
+    const handleCheckOut=()=>
+    {
+        navigate('/user/payment')
+        let __uniqeCode=Math.floor(100000 + Math.random() * 900000)
+        window.localStorage.setItem('UserOrder',JSON.stringify({Price:totalPrice,uniqeCode:__uniqeCode}));
+    }
     useEffect(()=>
     {
         Axios.get("http://localhost:5000/cardTest").then((response)=>
         {
             setCardDetails(response.data);
-            // console.log(response.data)
         })
     },[])
     return (<motion.div
@@ -27,11 +44,13 @@ const Menu=()=>
     >
         <div className='Menubg'>
         <Container className='mt-5'>
+            <Link to='/cartView'>
+            </Link>
             <Row>
             {cardDetails.map((val,key)=>
                      {
                      return ( 
-                        <Col lg={4} sm={6} className='mt-3'>
+                        <Col lg={3} sm={6} className='mt-3' key={key}>
                         <Card style={{ width: '18rem' }}>
                         <Card.Img  src={`/images/${val.articleimage}`} />
                         <Card.Body>
@@ -41,42 +60,15 @@ const Menu=()=>
                                 <br></br>
                                 <b>Price:</b>$ {val.price}
                             </Card.Text>
-                            <Link to={`food/${val._id}`}>
-                            <Button variant="success">Place Order</Button>
-                            </Link>
+                            <Button variant="success" onClick={()=>addProduct(val)}>Place Order</Button>
                         </Card.Body>
                         </Card>
                     </Col>
                      )
-                            })}
+                 })}
             </Row>
         </Container>
-        </div>
-        <div className='Container-bot'>
-        <Container>
-            <Row className=''>
-                <Col sm={12} className='mt-5 mb-5'><h1>FOLLOW US</h1></Col>
-                <Col lg={3}><h1>
-                    <BsGithub /></h1>
-                    <h3>Follow us Github</h3>
-                </Col>
-                <Col lg={3}><h1>
-                    <BsFacebook /></h1>
-                    <h3>Follow us Facebook</h3>
-                </Col>
-                <Col lg={3}><h1>
-                    <BsTwitter /></h1>
-                    <h3>Follow us BsTwitter</h3>
-                </Col>
-                <Col lg={3}><h1>
-                    <BsTwitch /></h1>
-                    <h3>Watch us on Twitch</h3>
-                </Col>
-            </Row>
-        </Container>
-        </div>
-    </motion.div>
-    
+    </div>
        
     )
 }

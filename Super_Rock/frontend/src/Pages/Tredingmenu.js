@@ -2,7 +2,7 @@ import {useEffect,useState} from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css';
-import './Tredingmenu.css'
+import './content/Tredingmenu.css'
 import testing from '../data.json';
 
 const Tredingmenu=()=>{

@@ -12,12 +12,10 @@ import {
   }
   from 'mdb-react-ui-kit';
 import './Login.css';
-import {motion} from 'framer-motion';
-import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
-import {Container,Row,Col,Button} from 'react-bootstrap';
 
 const Login=()=>
 {
+  const [errorMessage,setErrorMessage]=useState("");
   let navigate=useNavigate();
   const Formik=useFormik({
     initialValues:
@@ -29,8 +27,14 @@ const Login=()=>
        Axios.post('http://localhost:5000/login',{
         email:values.email,
         password:values.password
-    }).then(res=>navigate('/menu')
-      ).catch(err=>{alert('Cannot find user');
+    }).then(res=>
+      {
+        console.log(res.data.UserInfo)
+        window.localStorage.setItem('token',JSON.stringify(res.data));
+        navigate("/menu")
+        window.location.reload();
+      }).catch(err=>{
+        setErrorMessage(err.response.data.message);
     })
     }
   });
@@ -50,12 +54,18 @@ const Login=()=>
             <img src={logo} className="img-logo" alt="logo"/>
           </MDBCol>
   
-          <MDBCol col='4' md='6' className='mt-5'>
-            <h1 className='mb-5'>Login</h1>
+          <MDBCol col='4' md='6' className='mt-5r'>
+            <h1 className='mb-5 text-center'>Login</h1>
             <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg" name='email' value={Formik.values.email} onChange={Formik.handleChange}
             />
             <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"  name='password' value={Formik.values.password} onChange={Formik.handleChange}         
             />
+            { errorMessage?
+              <React.Fragment>
+                <p className='ErorrMessage'>{errorMessage}</p> 
+  
+              </React.Fragment>
+            :null}
             <div className='text-center text-md-start mt-4 pt-2'>
               <MDBBtn className="mb-0 px-5" size='lg' type='submit'>Login</MDBBtn>
               <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? 
@@ -64,7 +74,7 @@ const Login=()=>
               </Link>
               </p>
             </div>
-  
+            <Link to="/user/resetpassword">Forget Password</Link>
           </MDBCol>
   
         </MDBRow>

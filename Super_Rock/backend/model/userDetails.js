@@ -5,6 +5,7 @@ const userDetailsSchema= new mongoose.Schema(
         name: String,
         email: String,
         password: String,
+        isAdmin: {type:String,default:'false'}
     },
     {
         collection:'UserInformation'

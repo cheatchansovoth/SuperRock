@@ -2,9 +2,6 @@ import React from 'react';
 import photo from '../asset/superrock.png';
 import {Container,Row,Col,Button} from 'react-bootstrap';
 import './About.css';
-import {motion} from 'framer-motion';
-import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
-import videoBg1 from '../asset/Pexels Videos 1892490.mp4'
 
 const About=()=>
 {

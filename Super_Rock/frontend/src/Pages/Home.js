@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {Container,Row,Col,Button} from 'react-bootstrap';
 import TredingMenu from './Tredingmenu';
-import './Home.css'
+import './content/Home.css'
 import { BsGithub,BsFacebook,BsTwitter,BsTwitch} from 'react-icons/bs';
 import {motion} from 'framer-motion';
 import videoBg from '../asset/istockphoto-504093704-640_adpp_is.mp4'
