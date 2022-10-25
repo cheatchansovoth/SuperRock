@@ -43,3 +43,15 @@ body{
     width: 500px;
     margin: 100px auto;
 } */
+
+.aboutbg{
+    
+    padding: 1rem;
+    background-image: url("../asset/pngtree-restaurant-menu-background-material-picture-image_1052797.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
