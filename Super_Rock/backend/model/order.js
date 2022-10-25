@@ -2,10 +2,10 @@ const mongoose=require('mongoose');
 
 const userDetailsSchema= new mongoose.Schema(
     {
-        FoodID:String,
-        UserID:String,
-        Phone:String,
-        pickuptyle:String,
+        Email:String,
+        PaymentID:String,
+        Name:String,
+        Price:Number,
     },
     {
         collection:'ordertable'

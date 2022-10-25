@@ -5,7 +5,7 @@ import Axios from 'axios';
 import {Link,useNavigate} from 'react-router-dom';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { BsCartCheckFill } from "react-icons/bs";
-import './Menu.css'
+import './content/Menu.css'
 const Menu=()=>
 {
     const [cardDetails,setCardDetails]=useState([]);
@@ -24,11 +24,11 @@ const Menu=()=>
         setAddCart(addCart.filter((product)=>product!==productRemove));
     }
     let totalPrice=addCart.reduce((a,v) =>  a = a + v.price , 0 );
-    // window.localStorage.setItem('food',JSON.stringify(addCart));
     const handleCheckOut=()=>
     {
-        navigate('/payment')
-        window.localStorage.setItem('UserOrder',JSON.stringify({User:addCart,Price:totalPrice}));
+        navigate('/user/payment')
+        let __uniqeCode=Math.floor(100000 + Math.random() * 900000)
+        window.localStorage.setItem('UserOrder',JSON.stringify({Price:totalPrice,uniqeCode:__uniqeCode}));
     }
     useEffect(()=>
     {

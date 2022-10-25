@@ -1,7 +1,7 @@
 import React from 'react';
 import photo from '../asset/superrock.png';
 import {Container,Row,Col,Button} from 'react-bootstrap';
-import './About.css';
+import './content/About.css';
 
 const About=()=>
 {

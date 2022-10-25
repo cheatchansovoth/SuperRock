@@ -4,13 +4,13 @@ const userDetailsSchema= new mongoose.Schema(
     {
         Email:String,
         CreditHolderName: String,
-        CreditCardNumber: String,
-        ExpiredDate: Date,
+        CreditCardNumber: Number,
+        ExpiredDate: String,
         CVC:Number,
     },
     {
-        collection:'paymentTbl'
+        collection:'PaymentTbl'
     }
 );
 
-mongoose.model('paymentTbl',userDetailsSchema);
+mongoose.model('PaymentTbl',userDetailsSchema);

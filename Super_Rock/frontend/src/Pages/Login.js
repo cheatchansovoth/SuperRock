@@ -11,7 +11,7 @@ import {
     MDBInput,
   }
   from 'mdb-react-ui-kit';
-import './Login.css';
+import './content/Login.css';
 
 const Login=()=>
 {
@@ -66,7 +66,7 @@ const Login=()=>
               </Link>
               </p>
             </div>
-            <Link to="/resetpassword">Forget Password</Link>
+            <Link to="/user/resetpassword">Forget Password</Link>
           </MDBCol>
   
         </MDBRow>
