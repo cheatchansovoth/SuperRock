@@ -39,8 +39,8 @@ const Payment=()=>
                 <Row>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder='john@gmail.com'
+                        <Form.Label data-testid = "name">Full Name</Form.Label>
+                        <Form.Control type="text" placeholder='John Smith'
                             onChange={(event)=>
                                 {
                                   setEmail(event.target.value);
@@ -52,8 +52,8 @@ const Payment=()=>
                     </Col>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Name on Card</Form.Label>
-                        <Form.Control type="text" placeholder='John Smith'
+                        <Form.Label>Address</Form.Label>
+                        <Form.Control type="text" placeholder='21 Jump Street'
                             onChange={(event)=>
                                 {
                                   setCreditHolderName(event.target.value);
@@ -65,8 +65,8 @@ const Payment=()=>
                     </Col>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Credit Card Number</Form.Label>
-                        <Form.Control type="password" maxLength="12" placeholder='1111-2222-3333-4444'
+                        <Form.Label>City</Form.Label>
+                        <Form.Control type="text" placeholder='Auckland'
                             onChange={(event)=>
                                 {
                                   setCreditCardNumber(event.target.value);
@@ -78,8 +78,8 @@ const Payment=()=>
                     </Col>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Expire Date</Form.Label>
-                        <Form.Control type="date" 
+                        <Form.Label>Suburb</Form.Label>
+                        <Form.Control type="text" placeholder='Parnell'
                             onChange={(event)=>
                                 {
                                   setExpiredDate(event.target.value);
@@ -91,8 +91,8 @@ const Payment=()=>
                     </Col>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>CVC</Form.Label>
-                        <Form.Control type="password" maxLength="3"
+                        <Form.Label>Postcode</Form.Label>
+                        <Form.Control type="text" maxLength='4'
                             onChange={(event)=>
                                 {
                                   setCvc(event.target.value);
