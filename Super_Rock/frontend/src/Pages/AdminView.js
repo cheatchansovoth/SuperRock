@@ -10,9 +10,6 @@ const AdminView=()=>
 {
     const storeData=JSON.parse(localStorage.getItem('token'));
     const navigate = useNavigate();
-
-    const [data,setData]=useState([]);
-    const [error,setError]=useState("");
     if(storeData.UserInfo.isAdmin!='true')
     {
         alert('Unauthorized user')
@@ -20,6 +17,9 @@ const AdminView=()=>
         window.location.reload();
         navigate('/')
     }
+
+    const [data,setData]=useState([]);
+    const [error,setError]=useState("");
     useEffect(()=>
     {
         Axios.get("http://localhost:5000/cardTest").then((response)=>
