@@ -15,3 +15,8 @@
     background-color: #b7b7b7;
     text-align: center;
 }
+@media only screen and (max-width: 1278px) {
+    .Container-bot {
+      display: none;
+    }
+}
