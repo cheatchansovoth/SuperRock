@@ -140,8 +140,8 @@ const sendEmail=(Email,Name,OrderID)=>
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.Username,
-          pass: process.env.Password
+          user: 'cheatchansovoth@gmail.com',
+          pass: 'wsuizluhrmmmtrcu'
         }
       });
       
@@ -164,8 +164,8 @@ const resetPassword=(link,userEmail)=>
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.Username,
-      pass: process.env.Password
+      user: 'cheatchansovoth@gmail.com',
+      pass: 'wsuizluhrmmmtrcu'
     }
   });
   
@@ -279,6 +279,7 @@ app.post('/reset-password',async(req,res,next)=>
     const link=`http://localhost:3000/user/newpassword/${findUser._id}`;
     const token=jwt.sign(payload,secret,{expiresIn:'15m'})
     console.log(findUser)
+    resetPassword(link,findUser.email)
   }
 });
 app.get('/reset-password/:id',async (req,res)=>
