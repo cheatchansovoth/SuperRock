@@ -33,7 +33,7 @@ const Tredingmenu=()=>{
                             <SplideSlide>
                             <div key={food.id} className='Card mt-5'>
                                 <h3 className='fw-normal'>{food.articlename}</h3>
-                                <img src={`/images/${food.articleimage}`} alt={food.articlename} className='mt-3'/>
+                                <img src={`/images/${food.articleimage}`} alt={food.articlename} className='mt-3 card-img'/>
                             </div>
                             </SplideSlide>
                         );
