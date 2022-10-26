@@ -21,16 +21,16 @@ const About=()=>
                     but we also have a variety of handcrafted cocktails, wine, and beer to choose from.</p>
                     </div>
                     </Col>
-                    <Col lg={3} className='pic-category'>
+                    <Col lg={3} sm={6} className='pic-category'>
                     <img src='https://heartofthecity.co.nz/sites/default/files/styles/ratio_5_x_3_medium_/public/2019-07/restaurants-header-banner.jpg?itok=teAUFkF4'></img>
                     </Col>
-                    <Col lg={3} className='pic-category'>
+                    <Col lg={3} sm={6}className='pic-category'>
                     <img src='https://cdn.vox-cdn.com/thumbor/OheW0CNYdNihux9eVpJ958_bVCE=/0x0:5996x4003/1200x900/filters:focal(1003x1633:1961x2591)/cdn.vox-cdn.com/uploads/chorus_image/image/51830567/2021_03_23_Merois_008.30.jpg'></img>
                     </Col>
-                    <Col lg={3} className='pic-category'>
+                    <Col lg={3} sm={6} className='pic-category'>
                     <img src='https://www.qthotels.com/auckland/wp-content/uploads/sites/115/2020/10/Esther-Restaurant-QTA-1800x1120.jpg'></img>
                     </Col>
-                    <Col lg={3} className='pic-category'>
+                    <Col lg={3} sm={6} className='pic-category'>
                     <img src='https://resources.stuff.co.nz/content/dam/images/1/g/z/l/w/y/image.related.StuffLandscapeThreeByTwo.1464x976.1mmi3o.png/1509560697566.jpg'></img>
                     </Col>
                 </Row>
