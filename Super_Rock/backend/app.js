@@ -278,7 +278,7 @@ app.post('/reset-password',async(req,res,next)=>
     }
     const link=`http://localhost:3000/user/newpassword/${findUser._id}`;
     const token=jwt.sign(payload,secret,{expiresIn:'15m'})
-    console.log(findUser)
+    res.send(findUser);
     resetPassword(link,findUser.email)
   }
 });
