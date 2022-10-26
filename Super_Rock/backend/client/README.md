@@ -1,7 +1,8 @@
 <h1>SuperRock Project</h1>
  <br/>
 ---admin---<br />
-mooni@aut.ac.nz
-B692q9Usd3r69uD<br />
+username:mooni@aut.ac.nz <br />
+password:B692q9Usd3r69uD<br />
 ---user----<br />
-johnny@aut.ac.nz
+username:johnny@aut.ac.nz<br />
+password:B692q9Usd3r69uD<br />
