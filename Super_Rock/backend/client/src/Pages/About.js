@@ -22,16 +22,16 @@ const About=()=>
                     </div>
                     </Col>
                     <Col lg={3} sm={6} className='pic-category'>
-                    <img src='https://heartofthecity.co.nz/sites/default/files/styles/ratio_5_x_3_medium_/public/2019-07/restaurants-header-banner.jpg?itok=teAUFkF4'></img>
+                    <img src='https://cdn.animenewsnetwork.com/thumbnails/max1000x1500/cms/interest/112180/saowag02.jpg'></img>
                     </Col>
                     <Col lg={3} sm={6}className='pic-category'>
-                    <img src='https://cdn.vox-cdn.com/thumbor/OheW0CNYdNihux9eVpJ958_bVCE=/0x0:5996x4003/1200x900/filters:focal(1003x1633:1961x2591)/cdn.vox-cdn.com/uploads/chorus_image/image/51830567/2021_03_23_Merois_008.30.jpg'></img>
+                    <img src='https://i.pinimg.com/originals/09/29/c6/0929c6043ee8350ccde54c3a9e0fa043.jpg'></img>
                     </Col>
                     <Col lg={3} sm={6} className='pic-category'>
-                    <img src='https://www.qthotels.com/auckland/wp-content/uploads/sites/115/2020/10/Esther-Restaurant-QTA-1800x1120.jpg'></img>
+                    <img src='https://cdn.myanimelist.net/s/common/uploaded_files/1443487512-acb53bec969dcf6c94043247e8212f21.jpeg'></img>
                     </Col>
                     <Col lg={3} sm={6} className='pic-category'>
-                    <img src='https://resources.stuff.co.nz/content/dam/images/1/g/z/l/w/y/image.related.StuffLandscapeThreeByTwo.1464x976.1mmi3o.png/1509560697566.jpg'></img>
+                    <img src='https://drunkenotaku.files.wordpress.com/2011/12/kozuetakanashidrinking.jpg'></img>
                     </Col>
                 </Row>
             </Container>

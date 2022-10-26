@@ -39,6 +39,7 @@ const Menu=()=>
         })
     },[])
     return (<div>
+        <h1 className='text-center mt-5 fw-bolder'>OUR MENU</h1>
         <Container className='mt-5'>
             <Link to='/cartView'>
             </Link>

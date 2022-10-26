@@ -29,7 +29,7 @@ const Home=()=>
                     <p className='text-wrap fst-italic'>In addition to being known for world-class Chinese cuisine, <b className='h5'>Kenny</b> is the only chef on this list who has sent his food into space. In 2015, <b className='h5'>Kenny</b> sent meals to astronauts orbiting Earth aboard the International Space Station, an accomplishment that Kenny said he viewed as conquering ‘ the final frontier (of cooking)’.</p>
                     </Col>
                 <Col sm={12} lg={6}>
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Chef_icon.svg/1500px-Chef_icon.svg.png' id='chef'></img>
+                    <img src='https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2020/08/Neeko.png' id='chef'></img>
                 </Col>
             </Row>
         </Container>
