@@ -149,7 +149,7 @@ const sendEmail=(Email,Name,OrderID)=>
         from: 'cheatchansovoth@gmail.com',
         to: Email,
         subject: `Order Number:${OrderID}`,
-        html:`<p> Hi ${Name} Your food is ready</p>`
+        html:`<h1> Hi ${Name} </h1><br/><p>Your food is ready</p>`
       };
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
