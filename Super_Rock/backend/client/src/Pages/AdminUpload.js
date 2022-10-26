@@ -21,7 +21,7 @@ from 'mdb-react-ui-kit';
 
 const Admin=()=>{
     const [articlename,setarticlename]=useState("");
-    const [desciprtion,setdesciprtion]=useState("");
+    const [description,setdescription]=useState("");
     const [type,settype]=useState("");
     const [price,setprice]=useState("");
     const [articleImg,setarticleImg]=useState("");
@@ -43,13 +43,13 @@ const Admin=()=>{
       const formData=new FormData();
   
       formData.append("articlename",articlename)
-      formData.append("desciprtion",desciprtion)
+      formData.append("description",description)
       formData.append("type",type)
       formData.append("price",price)
       formData.append("articleImg",articleImg)
       e.preventDefault();
       Axios.post("http://localhost:5000/articleUpload",formData)
-      setError('Item has been deleted');
+      setError('Item has been submited');
     }
     return (
     <div>
@@ -77,7 +77,7 @@ const Admin=()=>{
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control type="text" placeholder="Description" 
                   onChange={(event)=>{
-                    setdesciprtion(event.target.value) 
+                    setdescription(event.target.value) 
                   }} />
                 </Form.Group>
             </Col>
