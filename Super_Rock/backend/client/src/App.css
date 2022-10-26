@@ -39,7 +39,11 @@
 {
   width: 280px;
 }
-.display-flex
+.pic-category img
 {
-  
+  width: 280px;
+  height: 180px;
+  margin-top: 10%;
+  padding-left: 10px;
+  border-radius: 50px;
 }

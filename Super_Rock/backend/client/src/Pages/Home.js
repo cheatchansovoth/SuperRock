@@ -25,7 +25,8 @@ const Home=()=>
                     <Col lg={6} sm={12}>
                     <h1 className='fw-normal'>KENNY</h1>
                     <h3 className='fw-normal'>CHEF</h3>
-                    <p className='text-wrap'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p className='text-wrap fst-italic'>Synonymous with breaking  <b>Michelin stars records</b>, <b className='h5'>Kenny</b> currently holds 17 Michelin stars. This makes him the current living chef with the most Michelin stars in the world.</p>
+                    <p className='text-wrap fst-italic'>In addition to being known for world-class Chinese cuisine, <b className='h5'>Kenny</b> is the only chef on this list who has sent his food into space. In 2015, <b className='h5'>Kenny</b> sent meals to astronauts orbiting Earth aboard the International Space Station, an accomplishment that Kenny said he viewed as conquering ‘ the final frontier (of cooking)’.</p>
                     </Col>
                 <Col sm={12} lg={6}>
                     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Chef_icon.svg/1500px-Chef_icon.svg.png' id='chef'></img>

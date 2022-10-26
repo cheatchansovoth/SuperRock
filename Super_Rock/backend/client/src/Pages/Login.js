@@ -47,7 +47,7 @@ const Login=()=>
           </MDBCol>
   
           <MDBCol col='4' md='6' className='mt-5r'>
-            <h1 className='mb-5 text-center'>Login</h1>
+            <h1 className='mb-5 text-center fw-bold'>Login</h1>
             <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg" name='email' value={Formik.values.email} onChange={Formik.handleChange}
             />
             <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"  name='password' value={Formik.values.password} onChange={Formik.handleChange}         

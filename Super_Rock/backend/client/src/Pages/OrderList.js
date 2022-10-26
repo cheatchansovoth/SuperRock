@@ -34,7 +34,7 @@ const OrderList=()=>
         }
     return (
 <React.Fragment>
-            <h1 className="text-center mt-5">Order List</h1>
+            <h1 className="text-center mt-5 fw-bolder text-decoration-underline">Order List</h1>
             <div className="d-flex">
             <Link to='/admin/control'><p className="m-5">Admin Menu</p></Link>
             <Link to='/admin/post'><p className="m-5">Upload Item</p></Link>

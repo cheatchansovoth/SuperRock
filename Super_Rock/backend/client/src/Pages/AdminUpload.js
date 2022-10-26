@@ -55,7 +55,7 @@ const Admin=()=>{
     <div>
       <Form  onSubmit={onHandle} encType='multipart/form-data'>
          <Container className='mt-5'>
-         <h1 className='text-center uppercase'>NEW MENU</h1>
+         <h1 className='text-center uppercase fw-bolder text-decoration-underline'>NEW MENU</h1>
           <Row >
             <Col lg={6} className='mt-5'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

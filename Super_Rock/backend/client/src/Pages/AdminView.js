@@ -26,7 +26,7 @@ const AdminView=()=>
         {
             setData(response.data);
         })
-    },[])
+    },[data])
     const Delete=(id)=>
     {
         Axios.delete(`http://localhost:5000/admin/deletemenu/${id}`).then(res=>
@@ -37,7 +37,7 @@ const AdminView=()=>
 
     return (
         <React.Fragment>
-            <h1 className="text-center mt-5">Admin View</h1>
+            <h1 className="text-center mt-5 fw-bolder text-decoration-underline">Admin View</h1>
             <div className="d-flex">
             <Link to='/admin/control/orderlist'><p className="m-5">View Order</p></Link>
             <Link to='/admin/post'><p className="m-5">Upload Item</p></Link>
@@ -50,7 +50,7 @@ const AdminView=()=>
             <th scope='col'>FoodName</th>
             <th scope='col'>Price</th>
             <th scope='col'>Type</th>
-            <th scope='col'>Action</th>
+            <th scope='col' className="text-center">Action</th>
             </tr>
         </MDBTableHead>
         <MDBTableBody >
@@ -63,6 +63,7 @@ const AdminView=()=>
                         <td>{product.articlename}</td>
                         <td>${product.price}</td>
                         <td>{product.type}</td>
+                        <td className="text-center">{product.description}</td>
                         <td>
                             <Button variant="success" className="m-2">Modify</Button>
                             <Button variant="danger" className="m-2" onClick={()=>Delete(product._id)}>Remove</Button>
