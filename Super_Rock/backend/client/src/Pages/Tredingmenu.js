@@ -29,6 +29,7 @@ const Tredingmenu=()=>{
                 gap:'1rem'
             }}>
                     {foods.map((food)=>{
+                        var ran=Math.floor(Math.random() * 5);
                         return (
                             <SplideSlide>
                             <div key={food.id} className='Card mt-5'>

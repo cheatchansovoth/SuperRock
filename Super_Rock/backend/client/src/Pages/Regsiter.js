@@ -73,7 +73,7 @@ const Register=()=>
                   />
                 </div>
                 {Formik.errors.confirm && Formik.touched.confirm ? <p>{Formik.errors.confirm}</p>:null}
-                <MDBBtn className='mb-4' size='lg' type="submit">Register</MDBBtn>
+                <MDBBtn className='mb-4' size='lg' type="submit" color='success'>Register</MDBBtn>
   
               </MDBCol>
   

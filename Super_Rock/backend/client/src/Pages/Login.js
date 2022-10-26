@@ -59,14 +59,14 @@ const Login=()=>
               </React.Fragment>
             :null}
             <div className='text-center text-md-start mt-4 pt-2'>
-              <MDBBtn className="mb-0 px-5" size='lg' type='submit'>Login</MDBBtn>
+              <MDBBtn className="mb-0 px-5" size='lg' type='submit' color='success'>Login</MDBBtn>
               <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? 
               <Link to='/register'>
-              Register
+              &nbsp;Register
               </Link>
+              <br/><Link to="/user/resetpassword">Forget Password</Link>
               </p>
             </div>
-            <Link to="/user/resetpassword">Forget Password</Link>
           </MDBCol>
   
         </MDBRow>
