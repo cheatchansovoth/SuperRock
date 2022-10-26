@@ -5,6 +5,7 @@ import Axios from 'axios';
 import {Link,useNavigate} from 'react-router-dom';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { BsCartCheckFill } from "react-icons/bs";
+import ReactStars from "react-rating-stars-component";
 import './content/Menu.css'
 const Menu=()=>
 {
@@ -44,6 +45,8 @@ const Menu=()=>
             <Row>
             {cardDetails.map((val,key)=>
                      {
+                    var ran=Math.floor(Math.random() * 5);
+                    console.log(ran)
                      return ( 
                         <Col lg={3} sm={6} className='mt-3' key={key}>
                         <Card style={{ width: '18rem' }}>
@@ -54,6 +57,12 @@ const Menu=()=>
                                 <b>Description:</b> {val.description}
                                 <br></br>
                                 <b>Price:</b>$ {val.price}
+                                <ReactStars
+                                count={5}
+                                value={ran}
+                                size={24}
+                                activeColor="#ffd700"
+                            />
                             </Card.Text>
                             <Button variant="success" onClick={()=>addProduct(val)}>Place Order</Button>
                         </Card.Body>
