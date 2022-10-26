@@ -25,26 +25,23 @@ const Contact=()=>
         <div>
             <Container>
                 <Row className='mt-5'>
-                    <Col><h1>Contact Us</h1></Col>
+                    <Col className='text-center'><h1 className='fw-bolder'>Contact Us</h1></Col>
                 </Row>
                 <Row>
-                <Col className='mt-5'>
-                        <p>Super Rock Resrutrant</p>
-                        <p>We offer a wide range of food options for our customers. Our range varies from a special breakfeast menu, 
+                  <Col className='mt-5' lg={6}>
+                        <p className='fw-bold'>Super Rock Restaurants</p>
+                        <p className='fst-italic'>We offer a wide range of food options for our customers. Our range varies from a special breakfeast menu, 
                             a special lunch menu and our very popular dinner menu. We will make that our serive satisfy your needs 
                             and that you have the best possible experience</p>
-                        <p>Address: 890 John Road</p>
-                        <p>Phone: 90181489104</p>
-                        <p>Email: super_rock@aut.com</p>
+                        <p className='fst-italic fw-bold'>Address: 890 John Road</p>
+                        <p className='fst-italic fw-bold'>Phone: 90181489104</p>
+                        <p className='fst-italic fw-bold'>Email: super_rock@aut.com</p>
                     
-                    </Col>
-                </Row>
-            </Container>
-            <Container>
-                <Row>
+                 </Col>
+                 <Row>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>FullName</Form.Label>
+                        <p className='text-center fw-bold'>Fullname</p>
                         <Form.Control type="text" 
                             onChange={(event)=>
                                 {
@@ -57,7 +54,7 @@ const Contact=()=>
                     </Col>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>
+                    <p className='text-center fw-bold'>Email</p>
                         <Form.Control type="email"
                             onChange={(event)=>
                                 {
@@ -70,7 +67,7 @@ const Contact=()=>
                     </Col>
                     <Col lg={4}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Phone</Form.Label>
+                    <p className='text-center fw-bold'>Phone</p>
                         <Form.Control type="text"
                             onChange={(event)=>
                                 {
@@ -89,9 +86,10 @@ const Contact=()=>
                                 }}                       
                     ></textarea>
                     </Col>
-                    <Col className='mt-5'>
-                        <Button onClick={sumbitButton}>Submit</Button>
+                    <Col className='mt-5 text-center'>
+                        <Button onClick={sumbitButton} variant='success'>Submit</Button>
                     </Col>
+                </Row>
                 </Row>
             </Container>
         </div>

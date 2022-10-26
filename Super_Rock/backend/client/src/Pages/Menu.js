@@ -49,9 +49,9 @@ const Menu=()=>
                         <Card style={{ width: '18rem' }}>
                         <Card.Img  src={`/images/${val.articleimage}`} />
                         <Card.Body>
-                            <Card.Title>{val.articlename}</Card.Title>
+                            <Card.Title className='text-capitalize'>{val.articlename}</Card.Title>
                             <Card.Text>
-                                <b>Type:</b>{val.type}
+                                <b>Description:</b> {val.description}
                                 <br></br>
                                 <b>Price:</b>$ {val.price}
                             </Card.Text>
