@@ -1,8 +1,18 @@
 <h1>SuperRock Project</h1>
  <br/>
+ ---Matthew Admin----
+ Email:mathhew.kuo@aut.ac.nz<br />
+ Password:Umi@Mooni12345<br />
 ---admin---<br />
-username:mooni@aut.ac.nz <br />
-password:B692q9Usd3r69uD<br />
+ Email:mooni@aut.ac.nz
+ Password:B692q9Usd3r69uD<br />
 ---user----<br />
-username:johnny@aut.ac.nz<br />
-password:B692q9Usd3r69uD<br />
+ Email:johnny@aut.ac.nz<br />
+ Password:B692q9Usd3r69uD<br />
+
+ ---UserView----
+ /
+ /login
+ /menu
+ ---AdminView---
+ /admin/control
